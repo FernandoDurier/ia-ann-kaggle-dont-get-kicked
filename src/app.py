@@ -95,7 +95,7 @@ for key, value in summary_of_features_by_types_test.items():
         clean_training_set[key] = clean_training_set[key].astype('category').cat.codes
 
 #Instantiating ANN
-clf = MLPClassifier(solver='lbfgs', alpha=1e-5, hidden_layer_sizes=(30,25,20,15,10,5), random_state=1)
+clf = MLPClassifier(solver='lbfgs', alpha=1e-5, hidden_layer_sizes=(30,20,10,5), random_state=1)
 #Training our model
 clf.fit(clean_training_set, y_train)
 #Testing the trained model against the test dataset
